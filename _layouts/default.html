@@ -9,17 +9,48 @@
         <title>{{ page.title }}</title>
 
         <link href="dist/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/docs.css" rel="stylesheet">
+        <link href="assets/css/pygments-manni.css" rel="stylesheet">
     </head>
 
     <body>
     <a class="sr-only" href="#content">Skip navigation</a>
 
     {% include header.html %}
+        <div class="container bs-docs-container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bs-sidebar hidden-print" role="complementary">
+                        <ul class="nav bs-sidenav">
+                            {% if page.slug == "getting-started" %}
+                                {% include nav-getting-started.html %}
+                            {% elsif page.slug == "css" %}
+                                {% include nav-css.html %}
+                            {% elsif page.slug == "components" %}
+                                {% include nav-components.html %}
+                            {% elsif page.slug == "js" %}
+                                {% include nav-javascript.html %}
+                            {% elsif page.slug == "customize" %}
+                                {% include nav-customize.html %}
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9" role="main">
+                    {{ content }}
+                </div>
+            </div>
+
+        </div>
         {{ content }}
     {% include footer.html %}
+    <script src="assets/js/jquery.js"></script>
 
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="dist/js/main.min.js"></script>
+    <script src="dist/js/docs.min.js"></script>
+    <script src="assets/js/holder.js"></script>
+
+    <script src="assets/js/application.js"></script>
     
     </body>
 </html>

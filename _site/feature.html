@@ -9,12 +9,14 @@
         <title>Bootstrap Accessibility</title>
 
         <link href="dist/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/docs.css" rel="stylesheet">
+        <link href="assets/css/pygments-manni.css" rel="stylesheet">
     </head>
 
     <body>
     <a class="sr-only" href="#content">Skip navigation</a>
 
-    <header class="navbar navbar-inverse" role="banner">
+    <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
     <div class="container">
         <div class="navbar-header">
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
@@ -31,7 +33,7 @@
                     <a href="features.html">Features</a>
                 </li>
                 <li>
-                    <a href="#">Features</a>
+                    <a href="Javascript.html">Javascript</a>
                 </li>
                 <li>
                     <a href="#">Features</a>
@@ -46,6 +48,26 @@
         </nav>
     </div>
 </header>
+        <div class="container bs-docs-container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="bs-sidebar hidden-print" role="complementary">
+                        <ul class="nav bs-sidenav">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9" role="main">
+                    <main id="content" role="main">
+  <div class="container">
+    <h1>Bootstrap Accessibility</h1>
+    <p>Bootstrap Accessibility</p>
+  </div>
+</main>
+                </div>
+            </div>
+
+        </div>
         <main id="content" role="main">
   <div class="container">
     <h1>Bootstrap Accessibility</h1>
@@ -55,9 +77,13 @@
         <footer class="container" role="contentinfo">
 gggg
     </footer>
+    <script src="assets/js/jquery.js"></script>
 
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="dist/js/main.min.js"></script>
+    <script src="dist/js/docs.min.js"></script>
+    <script src="assets/js/holder.js"></script>
+
+    <script src="assets/js/application.js"></script>
     
     </body>
 </html>
