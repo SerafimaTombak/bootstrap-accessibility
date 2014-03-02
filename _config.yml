@@ -1,0 +1,5 @@
+name: Your New Jekyll Site
+markdown: redcarpet
+pygments: true
+
+exclude:  [".gitignore", "Gruntfile.js", "package.json", "node_modules", "README.md", "less", "javascript"]
